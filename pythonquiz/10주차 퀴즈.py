@@ -5,7 +5,7 @@ def validation_of_resident_registration_number(a):
     total = 0
     for k in range(0, 12):
         total += int(a[k])*valid_check_code[k]
-    if 11-(total % 11) == int(a[-1]):
+    if (11-(total % 11)) % 10 == int(a[-1]):
         return "유효한 주민등록번호입니다."
     else:
         return "잘못된 주민등록번호입니다."
