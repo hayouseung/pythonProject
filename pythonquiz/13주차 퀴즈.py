@@ -6,7 +6,7 @@ class Beverage:
         self.total = 0
 
     def sell(self):
-        if self.name == "커피" or self.name == "녹차" or self.name == "아이스티":
+        if self.name in self.menu:
             self.total += self.menu[self.name] * int(self.count)
         else:
             print("음료 이름이 잘못되었습니다. 다시 입력해 주세요.")
