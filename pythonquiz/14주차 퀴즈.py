@@ -1,17 +1,14 @@
-class Kiosk:
-    def __init__(self, num):
-        self.menu = ["냉면", "볶음밥", "피자", "짜장면"]
-        self.num = num
-
-    def menu_choice(self):
+def menu_choice():
+    menu = ["냉면", "볶음밥", "피자", "짜장면"]
+    while True:
         try:
-            return self.menu[int(self.num) - 1]
+            a = input("메뉴 번호를 입력해 주세요: ")
+            return menu[int(a) - 1]
         except ValueError:
-            return "메뉴에 적힌 숫자만 입력 가능 합니다."
+            print("메뉴에 적힌 숫자만 입력 가능 합니다. 다시 입력해 주세요.")
         except IndexError:
-            return "메뉴에 없는 번호 입니다."
+            print("메뉴에 없는 번호 입니다. 다시 입력해 주세요.")
 
 
 print("메뉴 목록: 1. 냉면, 2. 볶음밥, 3. 피자, 4. 짜장면")
-menu_number = input("메뉴 번호를 입력해 주세요: ")
-print(Kiosk(menu_number).menu_choice())
+print(f"선택한 메뉴는 {menu_choice()}")
