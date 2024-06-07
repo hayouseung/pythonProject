@@ -2,7 +2,6 @@ class Kiosk:
     def __init__(self, num):
         self.menu = ["냉면", "볶음밥", "피자", "짜장면"]
         self.num = num
-        self.count = 0
 
     def menu_choice(self):
         try:
