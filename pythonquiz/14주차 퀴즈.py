@@ -3,7 +3,10 @@ def menu_choice():
     while True:
         try:
             menu_number = input("메뉴 번호를 입력해 주세요: ")
-            return menu[int(menu_number) - 1]
+            if int(menu_number) > 0:
+                return menu[int(menu_number) - 1]
+            else:
+                print("메뉴에 없는 번호 입니다. 다시 입력해 주세요.")
         except ValueError:
             print("메뉴에 적힌 숫자만 입력 가능 합니다. 다시 입력해 주세요.")
         except IndexError:
