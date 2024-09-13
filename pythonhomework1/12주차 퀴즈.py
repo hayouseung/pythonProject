@@ -3,9 +3,11 @@ class Bread:
         self.taste = taste
         self.price = price
         self.total = 0
+
     def sell(self):
         print(f"{self.taste}을 {self.price}에 팔았습니다.")
         self.total += self.price
+
     def eat(self):
         print(f"{self.taste}을 먹습니다.")
 

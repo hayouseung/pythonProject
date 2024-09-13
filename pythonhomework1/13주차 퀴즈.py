@@ -5,15 +5,15 @@ class Beverage:
         self.count = count
         self.total = 0
 
-    def sell(self):
+    def calculate(self):
         if self.name in self.menu:
-            self.total += self.menu[self.name] * int(self.count)
+            self.total += self.menu[self.name] * self.count
+            return self.total
         else:
-            print("음료 이름이 잘못되었습니다. 다시 입력해 주세요.")
+            return "음료 이름이 잘못 입력되었습니다. 다시 입력해 주세요."
 
 
 choice_beverage = input("주문할 음료를 선택해 주세요(커피/녹차/아이스티): ")
-choice_count = input("주문할 음료의 개수를 입력해 주세요: ")
+choice_count = int(input("주문할 음료의 개수를 입력해 주세요: "))
 order = Beverage(choice_beverage, choice_count)
-order.sell()
-print(order.total)
+print(f"총 금액: {order.calculate()}원")

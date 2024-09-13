@@ -1,6 +1,8 @@
 def validation_of_resident_registration_number(a):
     if "-" in a:
         a.remove("-")
+    if len(a) != 13:
+        return "잘못 입력하셨습니다."
     valid_check_code = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5]
     total = 0
     for k in range(0, 12):
