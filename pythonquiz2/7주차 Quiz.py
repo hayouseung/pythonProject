@@ -55,7 +55,7 @@ class Student:
         # 각 과목의 성적을 출력
         for subject, grade in self.grades.items():
             print(f"  {subject}: {grade}")
-        # 평균 성적을 출력
+        # 평균 성적을 출력(소수점 둘째 자리)
         print(f"  Average Grade: {self.get_average_grade():.2f}")
 
 
