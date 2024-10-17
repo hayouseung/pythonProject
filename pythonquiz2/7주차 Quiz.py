@@ -25,8 +25,8 @@ class Gugudan:
 
 
 # 예시 사용
-dan = Gugudan(3)
-dan.output()
+three_dan = Gugudan(3)
+three_dan.output()
 
 
 # Quiz 3
